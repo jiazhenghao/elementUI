@@ -2,9 +2,6 @@
 	<div class='hi'>
 		<p>{{ greeting }} World!</p>
 		<h2>{{element}}</h2>
-		<h3>wow!</h3>
-    <h3>wow!</h3>
-    <h4>wow!</h4>
 	</div>
   
 </template>
@@ -14,7 +11,7 @@ module.exports = {
   data: function () {
     return {
       greeting: 'Hello',
-      element: 'I love these things'
+      element: '湖人总冠军'
     }
   }
 }
