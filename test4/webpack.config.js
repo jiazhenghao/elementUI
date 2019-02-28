@@ -26,8 +26,9 @@ module.exports = {
     },
     resolve: {
         alias: {
-            //'vue': 'vue/dist/vue.js',
+            'vue': 'vue/dist/vue.js',
             //'element-ui': 'element-ui/lib/index.js'
+            //'vue$': 'vue/dist/vue.esm.js'
         }
     },
     devServer: { //webpack-dev-server配置
