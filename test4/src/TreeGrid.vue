@@ -33,9 +33,9 @@ import treeToArray from "./eval";
 console.log("trees");
 export default {
     name: "TreeTable",
-    data(){
-      return {};
-    },
+    // data(){
+    //   return {};
+    // },
     props: {
         /* eslint-disable */
         data: {
