@@ -16,7 +16,22 @@
         document.write("<h1>hello world!</h1>");
     </script>
     <script type="text/javascript">
-        alert("hi~");
+        //alert("hi~");
+        function hello() {
+            console.log("hello world");
+        }
+        hello();
+        hello.call();
+        function Person(firstName, secondName){
+            this.firstName = firstName;
+            this.secondName = secondName;
+        }
+        var john = new Person("John", "Terry");
+        //var henry = new Person(henry);
+        console.log(john);
+        console.log(john.firstName);
+        //console.log(henry);
+        
     </script>
 </body>
 </html>
