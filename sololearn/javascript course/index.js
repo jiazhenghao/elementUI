@@ -83,5 +83,31 @@ function exampleFunc() {
     */
 }
 
-exampleFunc();
+//exampleFunc();
 
+// const a = "Hello";
+// a = "Bye";
+// console.log(a);//index.js:89 Uncaught TypeError: Assignment to constant variable. at index.js:89
+
+//const variables have the same scope as let
+// const a = "Hello";
+// function halo() {
+//     console.log(a);//Uncaught ReferenceError: a is not defined
+//     const a = "World";
+//     console.log(a);
+// }
+// halo();//World
+// console.log(a);//Hello
+
+/* 
+template literals are enclosed by the backtick `` instead of double or single quotes
+The ${expression} is a placeholder, can include any expression, which will get inserted or evaluated into 
+the template literals
+*/
+function templateLiterals() {
+    let a = 8;
+    let b = 4;
+    let msg = `The sum is ${a + b}`;
+    console.log(msg);
+}
+templateLiterals();//The sum is 12
