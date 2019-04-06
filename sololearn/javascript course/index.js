@@ -316,12 +316,106 @@ the actual memory address
     marking all existing properties as non-configurable. 
     Values of present properties can still be changed as long as they are writable.
 */
-let object1 = {
-    property1: 42
-};
-Object.seal(object1);
-object1.property1 = 33;
-console.log(object1.property1);// 33
-delete object1.property1; // cannot delete when sealed
-console.log(object1.property1);// expected output: 33
+// let object1 = {
+//     property1: 42
+// };
+// Object.seal(object1);
+// object1.property1 = 33;
+// console.log(object1.property1);// 33
+// delete object1.property1; // cannot delete when sealed
+// console.log(object1.property1);// expected output: 33
 
+//array destructuring in ES6
+// let arr = ['1', '2', '3'];
+// let [one, two, three] = arr;
+// console.log(one);//1
+// console.log(two);//2
+// console.log(three);//3
+//we can also destructure an array returned by a function
+// let a = () => {
+//     return [1, 3, 2];
+// };
+// let [one, , two] = a();
+// console.log(one);//1
+// console.log(two);//2
+//example 1;
+// let a, b, c = 4, d = 8;
+// [a, b = 6] = [2]; // a = 2, b = 6
+// [c, d] = [d, c];  // c = 8, d = 4
+// console.log(a, b, c, d);
+
+//Object Destructuring in ES6
+// let obj = { h: 100, s: true };
+// let { h, s } = obj;
+// console.log(h);//100
+// console.log(s);//true
+// let {a, b} = {a:'hello', b:' world'};
+// console.log(a + b);//hello world
+//({a, b} = {a:'hello', b:' world'}); console.log(a + b); //hello world
+//you can assign default values in case the value unpacked from the Object is undefined
+// let obj = { id: 42, name: 'Jack' };
+// let { id = 10, age = 19 } = obj;
+// console.log(id);//42
+// console.log(age);//19
+//another example
+// let obj = { h: 42, s: true };
+// let { h: foo, s: bar } = obj;
+// console.log(foo);//42
+// console.log(bar);//true
+// console.log(s);//Uncaught ReferenceError: s is not defined
+
+// function containsAll(arr) {
+//     for (let k = 1; k < arguments.length; k++) {
+//         let num = arguments[k];
+//         if (arr.indexOf(num) === -1) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// let x = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(containsAll(x, 2, 4, 7));//true
+// console.log(containsAll(x, "2", 4, 3));//false
+// console.log(containsAll(x, 1, 2, 3, 10));//false
+//ES6 provides Rest parameter   ... is called Spread operator
+// function containsAllES6(arr, ...nums) {
+//     for (let v of nums) {
+//         if (arr.indexOf(v) === -1) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(containsAllES6(x, 2, 4, 7));//true
+// console.log(containsAllES6(x, "2", 4, 3));//false
+// console.log(containsAllES6(x, 1, 2, 3, 10));//false
+//If there are no extra arguments, the rest parameter will simply be an empty array.
+//which means the rest parameter will never be undefined.
+
+//It is common to pass the elements of an array as arguments to a function.
+//before es6, we used the following method;
+// function addAll(w, x, y, z) {
+//     console.log(w + x + y + z);
+// }
+// var arr = [1, 2, 3];
+// addAll.apply(null, arr.concat(4));
+//Function.prototype.apply https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+//concat do not change the original two arrays.just return a new one.
+//es6 provides an easier way to do the example above with Spread operators.
+// const addAllES6 = (w, x, y, z) => {
+//     console.log(w + x + y + z);
+// };
+// let args = [1, 2, 3];
+// addAllES6(...args, 4);
+
+// Spread in array literals
+// var arr = ["one", "two", "five"];
+// arr.splice(2, 0, "three");
+// arr.splice(3, 0, "four");
+// console.log(arr);//["one", "two", "three", "four", "five"]
+// //using Spread
+// let newArr = ["three", "four"];
+// let arrES6 = ["one", "two", ...newArr, "five"];
+// console.log(arrES6);//["one", "two", "three", "four", "five"]
+
+//Spread in object literals
