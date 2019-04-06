@@ -419,3 +419,22 @@ the actual memory address
 // console.log(arrES6);//["one", "two", "three", "four", "five"]
 
 //Spread in object literals
+// const obj1 = { foo: 'bar', x: 42 };
+// const obj2 = { foo: 'zar', y: 23 };
+// const clonedObj = { ...obj1 };
+// console.log(clonedObj);//{foo: "bar", x: 42}
+// const mergedObj = { ...obj1, ...obj2 };
+// console.log(mergedObj);//{foo: "zar", x: 42, y: 23}
+// console.log(obj1 == clonedObj);//false;
+// obj1.x /= 2;
+// console.log(obj1);//{foo: "bar", x: 21}
+// console.log(clonedObj);//{foo: "bar", x: 42}
+//However, using arrow function will not merge the objects I suppposed to.
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'zar', y: 23 };
+const merge = (...objects) => ({ ...objects });
+//不加{}时，有return作用，有返回值。加{}时没有返回值，如果要返回值，需要用return
+let mergeObj = merge(obj1, obj2);
+console.log(mergeObj);//{0: {foo: "bar", x: 42}, 1: {foo: "zar",y: 23}}
+//shallow cloning or merging objects is possible with Object.assign()
+
