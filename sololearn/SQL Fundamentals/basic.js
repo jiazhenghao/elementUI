@@ -119,3 +119,8 @@ SELECT MAX(t.Salary),t.ID,t.FirstName as min_salary FROM customers AS t where t.
 
 当你选择多列的时候，就必须使用group by 
 */
+
+/**
+ * limit 10
+ * 最多10行数据
+ */
