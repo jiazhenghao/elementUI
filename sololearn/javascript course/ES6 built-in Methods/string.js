@@ -29,3 +29,9 @@ console.log("Sololearn".includes("lole"));//true
 console.log("Sololearn".includes("olo", 1));//true
 console.log("Sololearn".includes("olo", 2));//false
 
+/**
+ * slice
+ */
+var str = 'i love sololearn!';
+var x = -5;
+console.log(str.slice(--x));//learn!
