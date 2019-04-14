@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width:400px;
+            height:300px;
+        }
+        .dropshadow {
+            filter: drop-shadow(5px 9px 2px blue);
+            -webkit-filter: drop-shadow(5px 9px 2px blue);
+        }
+        .grayscale {
+            filter: grayscale(100%);
+        }
+        .sepia {
+            filter:sepia(100%);
+        }
+        .saturate {
+            filter:saturate(200%);
+        }
+        .huerotate {
+            filter: hue-rotate(180deg);
+        }
+        .invert {
+            filter: invert(80%);
+        }
+        .opacity {
+            filter:opacity(70%);
+        }
+        .brightness {
+            filter:brightness(1.5);
+        }
+        .contrast {
+            filter:contrast(140%);
+        }
+        .blur {
+            filter: blur(1px);
+        }
+        .custom {
+            filter:saturate(30%) drop-shadow(5px 2px 2px gray) blur(0.1px);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div><img src="dragon.jpg" alt="dragon"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="dropshadow"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="grayscale"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="sepia"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="saturate"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="huerotate"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="invert"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="opacity"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="brightness"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="contrast"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="blur"></div>
+        <div><img src="dragon.jpg" alt="dragon" class="custom"></div>
+
+    </div>
+</body>
+</html>

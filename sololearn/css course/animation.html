@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes example {
+            0% {
+                background-color: red;
+            }
+
+            50% {
+                background-color: yellow;
+            }
+
+            70% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        @keyframes colorchange1 {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        @keyframes colorchange2 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: green;
+            }
+        }
+
+        @keyframes colorchange3 {
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: blue;
+            }
+            100% {
+                background-color: green;
+            }
+        }
+
+        @keyframes colorchange4 {
+            from {width:0px;}
+            to {width:100px;}
+        }
+
+        div.first {
+            width: 100px;
+            height:100px;
+            background-color: red;
+            animation-name: colorchange3;
+            animation-duration: 2s;
+        }
+
+        div.second {
+            height:100px;
+            background-color: red;
+            animation-name: colorchange4;
+            animation-duration: 3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">test for fun</div>
+    <div class="second">width to</div>
+</body>
+
+</html>

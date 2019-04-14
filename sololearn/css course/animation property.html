@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #first {
+            width: 200px;
+            height:200px;
+            background-color: red;
+            animation-name:colorchange;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+        #second {
+            width: 200px;
+            height:200px;
+            background-color: blue;
+            animation: colorchange 3s ease-in 1s infinite alternate-reverse;
+        }
+        @keyframes colorchange {
+            from {width:0px;}
+            to {width:200px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="first">test</div>
+    <div id="second">second have the same effect</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div.empty-div {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            margin: 30px;
+            padding: 10px;
+            border: 1px solid black;
+            perspective: 100px;
+            -webkit-perspective: 100px;
+        }
+        div.green-div {
+            padding: 60px;
+            height: 10px;
+            width:30px;
+            position: absolute;
+            background-color: #8bc34a;
+            border:1px solid white;
+            transform:rotateX(45deg);
+            -webkit-transform:rotateX(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="empty-div">
+        <div class="green-div">
+            example
+        </div>
+    </div>
+</body>
+</html>
