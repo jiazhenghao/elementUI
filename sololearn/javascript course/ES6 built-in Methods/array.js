@@ -38,3 +38,13 @@ console.log(animals.slice(2, 3));//["camel"]
 console.log(animals.slice(2, 2));//[]
 console.log(animals.slice(2, 1));//[]
 console.log(animals.slice());//["ant", "bison", "camel", "duck", "elephant"]
+
+/**
+ * Array.prototype.some
+ */
+var array = [1, 2, 3, 4, 5];
+var even = function(element) {
+  // checks whether an element is even
+  return element % 2 === 0;
+};
+console.log(array.some(even));//true

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #intro {
+            width: 200px;
+            height: 100px;
+            margin-top: 30px;
+            background-color: #32CD32;
+            transform: rotate(10deg);
+        }
+
+        #negative {
+            width: 200px;
+            height: 100px;
+            margin-top: 30px;
+            background-color: #32CD32;
+            transform: rotate(-10deg);
+        }
+
+        .empty-div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .green-div {
+            padding: 50px;
+            position: absolute;
+            background-color: #8bc34a;
+            border: 1px solid white;
+            transform: rotate(15deg);
+            transform-origin: 25% 75%;
+        }
+
+        .green-div2 {
+            padding: 50px;
+            position: absolute;
+            background-color: #8bc34a;
+            border: 1px solid white;
+            transform: rotate(15deg);
+            transform-origin: 75% 25%;
+        }
+
+        .green-div3 {
+            padding: 50px;
+            position: absolute;
+            background-color: #8bc34a;
+            border: 1px solid white;
+        }
+
+        .green-div4 {
+            padding: 50px;
+            position: absolute;
+            background-color: #8bc34a;
+            border: 1px solid white;
+            transform: translate(100px, 50px);
+        }
+
+        .green-div5 {
+            padding: 50px;
+            position: absolute;
+            background-color: #8bc34a;
+            border: 1px solid white;
+            transform: skew(30deg);
+        }
+
+        .green-div6 {
+            padding: 50px;
+            position: absolute;
+            background-color: #8bc34a;
+            border: 1px solid white;
+            transform: skew(30deg, 10deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="intro">rotate</div>
+    <div id="negative">rotate negative</div>
+    <div class="empty-div">
+        <div class="green-div"></div>
+    </div>
+    <div class="empty-div">
+        <div class="green-div2"></div>
+    </div>
+    <div class="empty-div">
+        <div class="green-div3"></div>
+    </div>
+    <div class="empty-div">
+        <div class="green-div4"></div>
+    </div>
+    <div class="empty-div">
+        <div class="green-div5"></div>
+    </div>
+    <div class="empty-div">
+        <div class="green-div6"></div>
+    </div>
+</body>
+
+</html>
