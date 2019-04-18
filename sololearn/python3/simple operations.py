@@ -8,3 +8,4 @@ print(1.25%0.5)
 print("Python is fun!")
 print("""Chinese men football team sucks.
 Nobody will believe in these idiots.""")
+input("enter something please\n")
