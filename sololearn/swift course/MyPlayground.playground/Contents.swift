@@ -200,3 +200,138 @@ func chooseFunc(flag: Bool) -> (Int) -> Int {
 var f = chooseFunc(flag: false)
 print(f(44))
 
+//nested functions
+func nestedExample(flag: Bool) -> (Int) -> Int {
+    func plus(input: Int) -> Int {
+        return input + 1
+    }
+    func minus(input: Int) -> Int {
+        return input - 1
+    }
+    if (flag) {
+        return plus
+    }
+    else {
+        return minus
+    }
+}
+
+//recursion
+func factorial(n: Int) -> Int {
+    return n == 0 ? 1 : n * factorial(n: n - 1)
+}
+print(factorial(n: 5))
+
+//closures
+//sorted method
+func backwards(s1: String, s2: String) -> Bool {
+    return s1 > s2
+}
+let names2 = ["Cc", "Aa", "Ee", "Bb", "Dd"]
+var reversed = names2.sorted(by: backwards)
+print(reversed)
+let names3 = ["Cc", "Aa", "Ee", "Bb", "Dd"]
+var reversed3 = names3.sorted(by: {(s1:String, s2:String) -> Bool in return s1 > s2})
+print(reversed3)
+//inferring typs from context, not recommended
+var reversed4 = names3.sorted(by: {s1, s2 in return s1 > s2})
+var reversed5 = names3.sorted(by: {s1, s2 in s1 > s2})
+//shorthand argument names
+var reversed6 = names3.sorted(by: {$0 > $1})
+var reversed7 = names3.sorted(by: >)
+
+//Tuples
+//have values of any type means do not share a common type
+let error = (404, "Not Found")
+let (statusCode, statusMessage) = error
+print("The code is \(statusCode)")
+print("The message is \(error.1)")
+let http200Status = (statusCode: 200, description: "OK")
+//Tuples are particularly useful as the return values of the function, and
+//are used as temporary groupings of related values.
+
+//an enumeration
+enum Compass {
+    case North
+    case South
+    case East
+    case West
+}
+enum Planet {
+    case Mercury, Venus, Earth, Mars, Jupiter
+}
+
+
+
+//definition of class and structures
+struct Resolution {
+    var width = 0
+    var height = 0
+}
+class VideoMode {
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+}
+let someRes = Resolution()
+let someVid = VideoMode()
+//all structures have an automatically-generated memberwise initializer, but class do not have
+let vga = Resolution(width: 640, height: 480)
+
+//Structures are value types
+//in fact, in swift, integers, floating-point numbers, booleans, strings, arrays, and dictionaries
+//are all value types
+//the same is true of enumerations
+let hd = Resolution(width: 1920, height: 1480)
+var cinema = hd
+cinema.width = 1024
+print(cinema.width)
+print(hd.width)
+//classes are reference types
+
+//lazy stored property
+//only calculated till the first time it is used
+//always var
+class DataManager {
+    lazy var importer = DataImporter()
+    var data = [String]()
+}
+struct DataImporter {
+    var data = [1, 2, 3]
+}
+//computed properties
+struct Point {
+    var x = 0.0, y = 0.0
+}
+struct Shape {
+    var origin = Point()
+    var center: Point {
+        get {
+            return Point(x: origin.x / 2, y: origin.y / 2)
+        }
+        set(newCenter) {
+            origin.x = newCenter.x / 2
+            origin.y = newCenter.y / 2
+        }
+    }
+}
+//property observers
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newSteps) {
+            print("About to set totalSteps to \(newSteps)")
+        }
+        didSet {
+            if totalSteps > oldValue {
+                print("Added \(totalSteps - oldValue) steps")
+            }
+            else {
+                print("Substracted \(oldValue - totalSteps) steps")
+            }
+        }
+    }
+}
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 50
+stepCounter.totalSteps = 150
+stepCounter.totalSteps = 20
