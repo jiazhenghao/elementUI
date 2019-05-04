@@ -335,3 +335,97 @@ let stepCounter = StepCounter()
 stepCounter.totalSteps = 50
 stepCounter.totalSteps = 150
 stepCounter.totalSteps = 20
+
+//methods
+class Counter {
+    var count = 0
+    func increment() {
+        count += 1
+    }
+    func reset() {
+        count = 0
+    }
+}
+//the self property
+struct PointNew {
+    var x = 0.0, y = 0.0
+    func compare(x: Double) -> Bool {
+        return self.x > x
+    }
+}
+//Structures and enumerations are value types. By default, the properties of a value type
+//cannot be modified from within its instance methods.
+//the mutating keyword
+struct PointSecond {
+    var x = 0.0, y = 0.0
+    mutating func moveByX(dx: Double, dy: Double) {
+        x += dx
+        y += dy
+    }
+}
+//a type method
+class SomeClass {
+    static func someTypeMethod() {
+        
+    }
+}
+SomeClass.someTypeMethod()
+
+//subscripts
+struct TimesTable {
+    let muliplier: Int
+    subscript(index: Int) -> Int {
+        return muliplier * index
+    }
+}
+let threeTimesTable = TimesTable(muliplier: 3)
+print(threeTimesTable[6])
+
+//matrix
+struct Matrix {
+    let rows: Int, columns: Int
+    var grid: [Double]
+    init(rows: Int, columns: Int) {
+        self.rows = rows
+        self.columns = columns
+        grid = Array(repeating: 0.0, count: rows * columns)
+    }
+    subscript(row: Int, column: Int) -> Double {
+        get {
+            return grid[(row * columns) + column]
+        }
+        set {
+            grid[(row * columns) + column] = newValue
+        }
+    }
+}
+
+//inheritence   class A:B
+//keyword override
+//super.somemethod()    super.someProperty      super[someIndex]
+//to prevent override, use keyword final on class or on method,property or subscript
+class Vehicle {
+    var currentSpeed = 0.0
+    func makeNoise() {
+        
+    }
+}
+class Train:Vehicle {
+    override func makeNoise() {
+        print("Choo Choo")
+    }
+}
+
+//class Initialization
+class Size {
+    var width: Double, height: Double
+    init(w:Double, h:Double) {
+        width = w
+        height = h
+    }
+}
+let twoByTwo = Size(w: 2.0, h: 2.0)
+
+//Deinitialization only available on class types.
+//deinit {
+//}
