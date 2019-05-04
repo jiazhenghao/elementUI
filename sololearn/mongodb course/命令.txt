@@ -1,0 +1,7 @@
+show dbs  # 展示所有数据库
+db #展示当前活跃的数据库
+use database_name # 转换到数据库xxx下 如果没有这个数据库，则会创建
+db.runoob.insert({"name":"菜鸟教程"}) #创建完成以后，看不到数据库和集合，因为需要插入内容。
+db.dropDatabase() # 删除数据库
+db.collection_name.drop() # 删除集合xxx
+show tables #展示集合
