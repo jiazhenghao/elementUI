@@ -34,3 +34,24 @@ console.log(typeof c);//undefined
 console.log(typeof d);//string
 console.log(c);//undefined
 
+/**
+ * 267 Q4
+ */
+var x = 6, y = 0;
+y += ++x + "" + x;
+console.log(y);//077
+
+/**
+ * 268 Q5
+ */
+var x = 32;
+//alert("x - ${x}");//x - ${x}
+console.log("x - ${x}");//x - ${x}
+console.log(`x - ${x}`);//x - 32
+
+/**
+ * 270 Q1
+ */
+var str = "I am 16 years and 5 months old";
+console.log(str.match(/\d+/));//["16", index: 5, input: "I am 16 years and 5 months old", groups: undefined]
+console.log(str.match(/\d+/g));//["16", "5"]
