@@ -9,10 +9,19 @@
 import UIKit
 
 class ItemTableViewController: UITableViewController {
+    
+    var items = [Item]()
+    
+    func loadSampleItems() {
+        items += [Item(name: "item1"), Item(name: "item2"), Item(name: "item3")]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadSampleItems()
 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -23,24 +32,26 @@ class ItemTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+       
+        return items.count
+        
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
         // Configure the cell...
-
-        return cell
+            let item = items[indexPath.row]
+            cell.nameLabel.text = item.name
+            return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

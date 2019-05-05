@@ -16,6 +16,7 @@
 		B0290DBB227D9B4400DDBA41 /* MyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0290DBA227D9B4400DDBA41 /* MyAppUITests.swift */; };
 		B0290DC9227DBEEE00DDBA41 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0290DC8227DBEED00DDBA41 /* ItemTableViewCell.swift */; };
 		B0290DCB227DC14000DDBA41 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0290DCA227DC14000DDBA41 /* Item.swift */; };
+		B0290DCD227F118400DDBA41 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0290DCC227F118400DDBA41 /* ItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B0290DBC227D9B4400DDBA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0290DC8227DBEED00DDBA41 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		B0290DCA227DC14000DDBA41 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B0290DCC227F118400DDBA41 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				B0290D9C227D9B4000DDBA41 /* ViewController.swift */,
 				B0290D9E227D9B4000DDBA41 /* Main.storyboard */,
 				B0290DCA227DC14000DDBA41 /* Item.swift */,
+				B0290DCC227F118400DDBA41 /* ItemTableViewController.swift */,
 				B0290DC8227DBEED00DDBA41 /* ItemTableViewCell.swift */,
 				B0290DA1227D9B4400DDBA41 /* Assets.xcassets */,
 				B0290DA3227D9B4400DDBA41 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0290DCD227F118400DDBA41 /* ItemTableViewController.swift in Sources */,
 				B0290DCB227DC14000DDBA41 /* Item.swift in Sources */,
 				B0290D9D227D9B4000DDBA41 /* ViewController.swift in Sources */,
 				B0290DC9227DBEEE00DDBA41 /* ItemTableViewCell.swift in Sources */,

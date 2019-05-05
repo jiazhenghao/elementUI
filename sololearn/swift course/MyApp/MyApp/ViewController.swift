@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var item: Item?
 
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -22,6 +23,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    
 }
 
