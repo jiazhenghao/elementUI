@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>注意点：没有 this、super、arguments 和 new.target 绑定。</p>
+    <p>箭头函数体中的 this 对象，是定义函数时的对象，而不是使用函数时的对象。</p>
+    <p>不可以作为构造函数，也就是不能使用 new 命令，否则会报错</p>
+    <script>
+        var func = () => {
+            // 箭头函数里面没有 this 对象，
+            // 此时的 this 是外层的 this 对象，即 Window 
+            console.log(this)
+        }
+        func(55)  // Window 
+
+        // var func = () => {
+        //     console.log(arguments)
+        // }
+        // func(55);  // ReferenceError: arguments is not defined
+
+        function fn() {
+            setTimeout(() => {
+                // 定义时，this 绑定的是 fn 中的 this 对象
+                console.log(this.a);
+            }, 1000)
+        }
+        var a = 20;
+        fn.call({ a: 18 });  // 18
+        setTimeout(() => {
+            // 定义时，this 绑定的是 window 中的 this 对象
+            console.log(this.a);
+        }, 3000);//20
+
+    </script>
+</body>
+
+</html>

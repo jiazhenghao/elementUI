@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>当箭头函数要返回对象的时候，为了区分于代码块，要用 () 将对象包裹起来</p>
+    <script>
+        // 报错
+        //var f = (id, name) => { id: id, name: name };
+        //f(6, 2);  // SyntaxError: Unexpected token :
+
+        // 不报错
+        var f = (id, name) => ({ id: id, name: name });
+        console.log(f(6, 2));  // {id: 6, name: 2}
+    </script>
+</body>
+
+</html>
