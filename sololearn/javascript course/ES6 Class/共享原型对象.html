@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Example {
+            constructor(a, b) {
+                this.a = a;
+                this.b = b;
+                console.log('Example');
+            }
+            sum() {
+                return this.a + this.b;
+            }
+        }
+        let exam1 = new Example(2, 1);
+        let exam2 = new Example(3, 1);
+        console.log(exam1);//
+        console.log(exam1._proto_ == exam2._proto_); // true
+        exam1.__proto__.sub = function () {
+            return this.a - this.b;
+        }
+        console.log(exam1.sub()); // 1
+        console.log(exam2.sub()); // 2
+        
+    </script>
+</body>
+
+</html>

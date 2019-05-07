@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        decorator
+        decorator 是一个函数，用来修改类的行为，在代码编译时产生作用。
+        <br>
+        类修饰
+        一个参数
+        <br>
+        第一个参数 target，指向类本身。
+        <br>
+        function testable(target) {
+        target.isTestable = true;
+        }
+        @testable
+        class Example {}
+        Example.isTestable; // true
+        多个参数——嵌套实现
+        <br>
+        function testable(isTestable) {
+        return function(target) {
+        target.isTestable=isTestable;
+        }
+        }
+        @testable(true)
+        class Example {}
+        Example.isTestable; // true
+        实例属性
+        <br>
+        上面两个例子添加的是静态属性，若要添加实例属性，在类的 prototype 上操作即可。
+        <br>
+        方法修饰
+        3个参数：target（类的原型对象）、name（修饰的属性名）、descriptor（该属性的描述对象）。
+        <br>
+        class Example {
+        @writable
+        sum(a, b) {
+        return a + b;
+        }
+        }
+        function writable(target, name, descriptor) {
+        descriptor.writable = false;
+        return descriptor; // 必须返回
+        }
+    </div>
+    <div>
+        修饰器执行顺序
+        <hr>
+        由外向内进入，由内向外执行。
+        <hr>
+        <code>
+        class Example {
+        @logMethod(1)
+        @logMthod(2)
+        sum(a, b){
+        return a + b;
+        }
+        }
+        function logMethod(id) {
+        console.log('evaluated logMethod'+id);
+        return (target, name, desctiptor) => console.log('excuted logMethod '+id);
+        }
+        // evaluated logMethod 1
+        // evaluated logMethod 2
+        // excuted logMethod 2
+        // excuted logMethod 1
+        </code>
+    </div>
+</body>
+
+</html>

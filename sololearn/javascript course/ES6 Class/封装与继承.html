@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Example1 {
+            constructor(a, b) {
+                this.a = a;
+                this.b = b;
+            }
+            get a() {
+                console.log('getter');
+                return this._a;
+            }
+            set a(a) {
+                console.log('setter');
+                this._a = a;
+            }
+        }
+        let exam1 = new Example1(1, 2); // 只输出 setter , 不会调用 getter 方法
+        console.log(exam1._a); // 1, 可以直接访问
+    </script>
+</body>
+
+</html>
