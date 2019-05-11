@@ -1,0 +1,5 @@
+1. Versatile components
+2. Built-in reactivity 
+3. fast initial load, fast render
+4. familiar directives
+v-for v-in v-bind

@@ -1,0 +1,10 @@
+Who uses vue?
+1.Small teams or individuals creating prototypes or very small apps.
+2.Large teams collaborating on building large web applications.
+Vue use components to form the front end army. Different developers can create
+different components and join together, it's a beautiful application.
+3.Seasoned developers brought in to fix a problematic area of a legacy website.
+Suppose you have a PHP website, and you want to fix a single page, instead of paying 
+a lot of money to ask for php developers to do so, you can use Vue to just replace this
+page without destroying the others.
+ 

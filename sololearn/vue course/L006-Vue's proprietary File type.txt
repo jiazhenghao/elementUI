@@ -1,0 +1,22 @@
+.Vue
+
+proprietary
+英[prəˈpraɪətri]
+专卖的; 专营的; 专利的; 
+
+.vue files can contain HTML, CSS and JS code 
+
+.vue files can't be read by web browsers (build step is required)
+//a sacrifice must be made, but already Vue community has many solutions 
+
+allows all the code for a single component to be in one file
+//unlike PHP, don't have to use HTML templates anymore.
+
+"template" section  contains HTML
+interpolation插入文字 can occur within template
+
+"script" contains application code
+exported value is automatically turned into Vue component
+
+"styles" will be applied to this component only(scoped)
+

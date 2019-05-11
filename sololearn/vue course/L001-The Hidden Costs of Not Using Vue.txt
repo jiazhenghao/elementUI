@@ -1,0 +1,9 @@
+The Hidden Costs of Not Using Vue
+1.Mobile users get bored and navigate away before your framework of choice has even loaded.
+//Vue is small and quick to load
+2.Redrawing lists of just updating the DOM is so slow, your website seems like it has frozen 
+together on mobile devices
+//PHP Java
+3.Developers emplyed to update a messy and disorganized application take a long and expensive
+time to do so.
+//coding hours are expensive.

@@ -1,0 +1,8 @@
+prerequisite
+英[ˌpriːˈrekwəzɪt]
+
+prerequisites for using Vue
+1.Basic knowledge of JavaScript, CSS and HTML
+2.Functional text editor(Atom or Webstorm)
+3.Basic local server (Apache, http-server, Vue CLI)
+

@@ -1,0 +1,16 @@
+Why Vue?
+1. Like William Shakespeare, Twelfth Night
+Some are born great, some achieve greatness, and some have greatness thrust upon them.
+//React is great, Angular achieves greatness, and Vue has greatness thrust upon them.
+2. Works for new or existing applications
+PHP, Angular You name it.
+A whole new project, Vue is OK. Also, besides starting from a new scratch, Vue can 
+improve your PHP or react project by updating from anywhere you want.
+3.Features are familiar to React and Angular developers
+Virtual Dom from react 
+learning process is fast.
+4.Fast, easy to understand and to maintain
+5.popular, 138,196 stars on Github
+angular 47,398  react 128,811 
+more contributors 
+a big deal and used by important and professional people

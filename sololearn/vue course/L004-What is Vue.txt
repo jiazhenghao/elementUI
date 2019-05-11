@@ -1,0 +1,7 @@
+What is Vue?
+1.A JavaScript library 
+A large block of JavaScript code that is executed before your own code is executed and 
+which gives context to code you write
+2.A render engine, taking a data model and components as input and outputting HTML
+3.A collaboration tool, allowing for the segmentation of applications into smaller 
+parcels of work(using components)
