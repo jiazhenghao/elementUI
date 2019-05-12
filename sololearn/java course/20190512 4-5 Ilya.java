@@ -1,0 +1,3 @@
+/*
+    String is a primitive data type. This is false in Java.
+*/
