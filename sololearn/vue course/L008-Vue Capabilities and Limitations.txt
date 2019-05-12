@@ -1,0 +1,15 @@
+What vue does:
+
+1. Outputs HTML code for browsers
+2. Maps user interactions(e.g, clicking, hovering) to JavaScript methods you write
+3. Uses sophisticated techniques to speed the rendering of the application
+4. works in most browsers without any build step
+
+What vue does not do:
+
+1.Does not create a server for your application(compliment with Vue-CLI)
+2.Does not test code for errors
+3.Does not provide significant utility methods //工具方法;Angular
+4.Does not facilitate routing(compliment with Vue-Router)
+5.Does not provide own solution for modules beyond native ES6//Angular
+
