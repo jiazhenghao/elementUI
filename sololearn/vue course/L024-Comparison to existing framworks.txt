@@ -1,0 +1,6 @@
+"There is nothing either good or bad, but thinking makes it so."
+William Shakespeare, Hamlet
+
+1.File size of major Frameworks after minified
+Vue < React < Angular < Ember
+

@@ -1,0 +1,15 @@
+1.Tool for creating, building and updating Vue applications
+2.Provides standard way to update app across whole team
+3.Allows junior developers to add to the application's structure
+4.Faciliates productivity among large teams and big projects
+
+#vue cli commands
+>vue serve          serves the current directory as an application with app.vue 
+                    as its root
+>vue build          assemble a .vue and ES6 project into an HTML and JS one 
+                    usable by browsers
+>vue create         Creates a new Vue project(Using CLI or UI)
+>vue ui 
+
+>vue add            Installs plugins for Vue-CLI
+
