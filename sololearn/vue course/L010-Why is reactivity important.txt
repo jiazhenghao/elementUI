@@ -1,0 +1,4 @@
+1.JavaScript does not have built-in  reactivity
+2.Reactivity that is not implemented correctly can be extremely slow
+3.Vue and similar libraries slove this problem differently
+

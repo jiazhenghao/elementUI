@@ -1,0 +1,8 @@
+1.Simple changes(especially to the view layer) take a long time and 
+are so complicated, only senior devs can do them.
+2.Requests for new features in the view layer are denied because 
+implementing them would be too difficult, or because making the change
+might break something else
+3.application code is all ad-hoc, new developers have to learn how everything
+works from the ground up
+

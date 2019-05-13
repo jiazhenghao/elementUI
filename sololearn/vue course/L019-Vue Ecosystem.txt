@@ -1,0 +1,11 @@
+Vue is small library and its core features are limited to quickly
+rendering your application's view
+
+To achieve the same functionality as React or Angular other libraries
+need to be used together with Vue
+
+nuxt        Universal rendering
+Vuex        State management 
+vuetify     component framework
+Vue-cli     scaffoloding & build
+

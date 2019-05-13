@@ -1,0 +1,4 @@
+1.Changes to data model are automatically detected.
+2.What the user sees is updated automatically and instantly.
+Do not need call a render function
+3.Elements are reused and changes are batched to improve performance.

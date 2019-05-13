@@ -1,0 +1,3 @@
+1.Provides a way of updating your state
+2.Similar to Flux or Redux
+3.Used to keep applications with massive state manageable

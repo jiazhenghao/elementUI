@@ -1,0 +1,4 @@
+components allow separation of concerns
+HTML,CSS and JavaScript developers can work together
+Growing proportion of new team members are already familiar with Vue
+Ecosystem libraries provide necessary tooling for production applications

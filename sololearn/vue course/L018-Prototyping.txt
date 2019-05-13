@@ -1,0 +1,3 @@
+Vue can be set up very quickly
+Prototype apps can include many elements with no performance issues
+conversion to a full-scale Vue app is straightforward.

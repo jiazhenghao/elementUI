@@ -1,0 +1,5 @@
+1.Vue components update automatically when model changes.
+2.Reactivity is simple for numbers, strings and boolean.
+3.Reactivity is not so simple for arrays or objects(mutable)
+4.Vue can't always tell when an array has been updated.
+5.With mutable data,view may not update as expected.

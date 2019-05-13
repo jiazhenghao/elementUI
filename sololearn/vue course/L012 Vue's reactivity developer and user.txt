@@ -1,0 +1,8 @@
+Code is easier to write and maintain 
+Vue uses virtual DOM to make large updates fast and declarative
+Less code, fixing bug is easier
+
+The application is fast and enjoyable
+application doesn't seem to get slower despite more activity
+User experiences fewer bugs
+

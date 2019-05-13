@@ -1,0 +1,4 @@
+Vue can be incrementally included
+Problem areas can be replaced without changing application structure
+Vue co-exists well with react, angular and jquery
+Benefits to affected areas are felt immediately
