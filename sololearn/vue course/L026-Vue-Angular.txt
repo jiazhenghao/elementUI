@@ -1,0 +1,13 @@
+Vue:
+1.Simple and easy to learn due to emphasis on plain HTML and JavaScript
+2.Uses only JavaScript modules(optional)
+3.Easy to integrate as just one part of the application
+4.Productivity peaks at medium-sized applications
+5.Add functionality with directives such as v-for, v-if
+
+Angular:
+1.Learning Angular is no simple task due to emphasis on modules and TypeScript
+2.Uses JavaScript modules and Angular modules
+3.Does not tend to integrate well with other frameworks
+4.Productivity peaks for large or very large applications
+5.Add functionality with directives such as ng-for ng-if

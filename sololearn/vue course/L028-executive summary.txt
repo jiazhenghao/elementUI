@@ -1,0 +1,16 @@
+Vue is fast, lightweight and easy to use
+Vue has much in common with both Angular and React, though it is simpler
+Vue applications are built from components.
+Vue works without a build step for prototypes, and with a build step for serious 
+production applications
+Vue has a vibrant ecosystem, without it, Vue only renders the view layer.
+
+Vue advantages summary:
+1.small package size
+2.omit build step when necessary
+3.familiar API 
+4.Strong command-line tools
+5.great for prototyping
+6.is easy to learn and use
+7.strong community support
+

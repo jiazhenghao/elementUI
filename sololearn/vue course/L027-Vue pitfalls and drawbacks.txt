@@ -1,0 +1,9 @@
+1.needs support from ecosystem
+2.tricky reactivity
+3. vue file type may confuse new developers
+4. relatively new and untested
+
+Why you might not use vue
+1.less established, fewer existing resources
+2.many production scenarios are yet unproven
+3.From the beginning, it is known that the finished project will be huge

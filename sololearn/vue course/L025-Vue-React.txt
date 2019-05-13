@@ -1,0 +1,16 @@
+Vue:
+Builds fast and scalable applications
+Speeds up render with Virtual DOM
+Proprietary file type .vue, used to logically group HTML and JS
+Add functionality with directives such as v-for and v-if
+Vue-CLI makes structure easy
+Vue without build step provides excellent path to prototyping
+
+React:
+Builds fast and scalable applications
+Speeds up render with Virtual DOM
+Proprietary coding language, .jsx, used to logically group HTML and JS
+Add functionality with plain JavaScript such as maps and ternary statements
+Create-React-App makes structure easy
+React needs JSX - even prototypes should have build step
+
