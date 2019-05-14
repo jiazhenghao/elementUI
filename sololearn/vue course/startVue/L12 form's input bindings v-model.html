@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <form action="" id="growler">
+        <input type="text" v-model="query" placeholder="Search...">
+        <br>
+        <div>Searching for: {{ query }}</div>
+        <textarea name="tx" id="tx" cols="30" rows="10" v-model="emailMessage"></textarea>
+        <br>
+        <input type="checkbox" name="chbox1" id="chbox1" v-model="isPowerSyntaxEnabled">
+        <label for="chbox1">nice checkbox</label>
+        <br>
+        <label>
+            <input type="checkbox" value="beers" v-model="searchIndexes">Beers
+        </label>
+        <label>
+            <input type="checkbox" value="breweries" v-model="searchIndexes">Breweries
+        </label>
+    </form>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //v-model
+        //text fields   checkboxes  radio buttons   dropdown lists
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                appName: "Growler",
+                query: "",
+                emailMessage: "",
+                isPowerSyntaxEnabled: true,
+                searchIndexes: []
+            }
+        });
+        
+
+    </script>
+</body>
+
+</html>
