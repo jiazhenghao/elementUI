@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Strive to keep CSS seperate from data</h1>
+    <div id="growler">
+        <h2 v-bind:style="appStyle">{{appName}}</h2>
+    </div>
+    <div id="growler2">
+        <h2 v-bind:style="[accentColor, headers]">{{appName}}</h2>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //Getting CSS properties from an Object during binding
+        //each property name must be the name of a css property
+        //the value can be a property name or a static value
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                appName: "growler",
+                appStyle: {
+                    color: "#ff6723",
+                    fontFamily: "Verdana",
+                    margin: 0
+                }
+            }
+        });
+        //Getting CSS properties from an Array
+        var growler2 = new Vue({
+            el: "#growler2",
+            data: {
+                appName: "growler2",
+                accentColor: {
+                    color: "#116f23"
+                },
+                headers: {
+                    fontFamily: "Verdana",
+                    margin: 0
+                }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
