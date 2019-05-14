@@ -5,13 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - alpha5and5",
+            "request": "launch",
+            "mainClass": "project0514.alpha5and5",
+            "projectName": "elementUI_c875196f"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ilya_0513_3_3",
+            "request": "launch",
+            "mainClass": "Ilya_0513_3_3",
+            "projectName": "elementUI_c875196f"
+        },
+        {
             "type": "node",
             "request": "attach",
             "name": "Attach by Process ID",
             "processId": "${command:PickProcess}"
         },
-
-
         {
             "type": "node",
             "request": "launch",
