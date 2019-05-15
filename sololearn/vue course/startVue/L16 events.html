@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <form action="" id="growler">
+        <input type="text" v-model.lazy="query" placeholder="Search...">
+        <div>Searching for: {{ query }}</div>
+        <button v-on:click="executeSearch('token', $event)">Search</button>
+        <!-- <button @click="executeSearch('token', $event)">Search</button> -->
+    </form>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //attaching to Events
+        //v-on directive
+        //listens for events in the HTML DOM
+        //ignore the "on" prefix that you might've used in HTML
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                query: '',
+                number: ''
+            },
+            methods: {
+                executeSearch: function (t, event) {
+                    var msg = 'Token: ' + t + ' Query: "' + this.query +
+                     ' " Button: "' + event.target.innerText + ' "'
+                    alert(msg);
+                }
+            }
+        });
+        //in a method, the "this" keyword is automatically bound to the Vue instance
+        //the last parameter in an event handler is the Event object that triggered the event.
+        //$event parameter is a reserved variable which accesses to the HTML DOM event
+    </script>
+</body>
+
+</html>

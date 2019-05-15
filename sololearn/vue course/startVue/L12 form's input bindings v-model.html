@@ -26,6 +26,15 @@
         <label>
             <input type="checkbox" value="breweries" v-model="searchIndexes">Breweries
         </label>
+        <label>
+            <input type="radio" value="apple" v-model="fruitsIndex">Apple
+        </label>
+        <label>
+            <input type="radio" value="banana" v-model="fruitsIndex">Banana
+        </label>
+        <label>
+            <input type="radio" value="orange" v-model="fruitsIndex">Orange
+        </label>
     </form>
 
     <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
@@ -40,11 +49,12 @@
                 query: "",
                 emailMessage: "",
                 isPowerSyntaxEnabled: true,
-                searchIndexes: []
+                searchIndexes: [],
+                fruitsIndex:'apple'
             }
         });
         
-
+        
     </script>
 </body>
 

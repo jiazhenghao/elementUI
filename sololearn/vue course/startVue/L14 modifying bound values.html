@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <form action="" id="growler">
+        <input type="text" v-model.trim="query" placeholder="Search...">
+        <div>Searching for: {{ query }}</div>
+        <input type="text" v-model.number="number" placeholder="2+3=">
+        <div>Searching for: {{ number }}</div>
+    </form>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //trim Modifier
+        //removes whitespace
+        //removes leading and trailing whitespace
+        //includes spaces tabs and line breaks
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                query: '',
+                number: ''
+            }
+        });
+        //number modifier
+        //tries to cast user input to a number
+        //HTML elements return values as strings
+        //tries to get a Number object
+        
+
+
+    </script>
+</body>
+
+</html>
