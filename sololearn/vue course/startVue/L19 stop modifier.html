@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div v-on:click="grandparentClick" id="growler">
+        <div v-on:click="parentClick">
+            <button v-on:click.stop="executeSearch">
+                Search
+            </button>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //stop modifier makes code more predictable, less code executed 
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                query: ''
+            },
+            methods: {
+                grandparentClick: function () {
+                    console.log("123");
+                },
+                parentClick: function () {
+                    console.log("456");
+                },
+                executeSearch: function (t, event) {
+                    console.log("789");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
