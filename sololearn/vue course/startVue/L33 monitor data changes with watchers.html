@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #growler {
+            background-color: aqua;
+            width: 500px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="growler" v-cloak>
+        <table>
+            <tr>
+                <th>Beer</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            <tr v-for="beer in beers">
+                <td>{{ beer.name }}</td>
+                <td>{{ beer.price }}</td>
+                <td>
+                    <button v-on:click="buy(beer)">buy</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Subtotal</td>
+                <td>{{ subTotal }}</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //watchers
+        //special functions that let you react to data property changes
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                beers: [
+                    {name: 'Ahool Ale', price: 2.80},
+                    {name: 'Agogwe Ale', price: 2.38}
+                ],
+                shoppingCart: [],
+                subTotal: 0.00
+            },
+            watch: {
+                shoppingCart: function() {
+                    this.updateSubTotal();
+                }
+            },
+            methods: {
+                updateSubTotal: function() {
+                    var s = this.shoppingCart.length;
+                    var t = 0;
+                    for (let i = 0; i < s; i++) 
+                        t += this.shoppingCart[i].price;
+                    this.subTotal = t;
+                },
+                buy: function(beer) {
+                    this.shoppingCart.push(beer);
+                }
+            }
+        });
+        //Talking more about watcher
+        // watch: {
+        //     subTotal: function(latest, original) {
+        //         console.log(latest, original);
+        //     }
+        // }
+        //Getting the before and after values
+        //Vue doesn't keep data copies for Objects and Arrays!!!
+        
+        //Watching Array length changes
+        // created: function() {
+        //     this.$watch('shoppingCart.length', function(latest, original) {
+        //         growler.updateSubTotal();
+        //     });
+        // }
+        //Use of a simple dot-delimited path
+
+        //watcher 只是一个浅复制。所以如果对象或者数组的引用地址不变，就不会触发
+        //但可以通过如下代码来改成深度复制。或者叫深度检测
+        // watch: {
+        //     shoppingCart: {
+        //         handler: function(latest, original) {
+        //             this.updateSubTotal();
+        //         },
+        //         deep: true
+        //     }
+        // }
+        //Turn deep monitoring on only when it is necessary
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #growler {
+            background-color: aqua;
+            width: 500px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="growler" v-cloak>
+        <div>
+            <label><strong>Max Alcohol by Volume(a.b.v)</strong></label>
+            <input type="range" v-model="maxAbv" min="0" max="100">
+            <small>{{ maxAbv }}</small>
+        </div>
+        <ul>
+            <li><strong>Beers</strong></li>
+            <li
+                v-for="beer in beers"
+                v-if="beer.abv < maxAbv">
+                name:{{ beer.name }} , abv: {{ beer.abv }}
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //using v-for and v-if together
+        //the for directive has higher precedence
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                beers: [
+                    {name: 'Tikibalang Barley Wine', abv:9.6},
+                    {name: 'Hyote Chocolate Stout', abv:7.4},
+                    {name: 'Pope Lick Porter', abv:6.5},
+                    {name: 'Ahool Ale', abv:5.4},
+                    {name: 'North Adjule Lager', abv:3.7},
+                    {name: 'Red wine', abv:12.3},
+                    {name: 'Sake', abv:22.4},
+                    {name: 'Shochu', abv:25.1},
+                    {name: 'Gin', abv:33.9},
+                    {name: 'Vodka', abv:44.2},
+                    {name: 'Cask Strength Whisky', abv:55.6}
+                ],
+                maxAbv:7.0
+            }
+        });
+    </script>
+</body>
+
+</html>

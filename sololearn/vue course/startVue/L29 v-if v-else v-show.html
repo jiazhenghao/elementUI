@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #growler {
+            background-color: aqua;
+            width: 500px;
+            height: 400px;
+        }
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="growler">
+        <label>Query Results</label>
+        <div v-cloak>
+            <div v-if="beers.length === 0">No beers were returned</div>
+            <div v-else-if="beers.length === 1"> 1 beer was returned</div>
+            <div v-else>{{beers.length}} beers were returned</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //v-if v-else
+        //let you conditonally render content based on an expression
+        setTimeout(function () {
+            var growler = new Vue({
+                el: "#growler",
+                data: {
+                    beers: [1,2,3]
+                }
+            });
+        }, 2000);
+        //v-if  1.better for complex logic 2.conditionaly renders
+        //3.higher toggling costs at runtime
+        //v-show   1.better for basic logic 2.always renders
+        //3.lower toggling costs at runtime
+        //If something is unlikely to change after a rendering, it's better 
+        //to use a v-if.
+        
+    </script>
+</body>
+
+</html>

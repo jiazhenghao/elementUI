@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #growler {
+            background-color: aqua;
+            width: 500px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="growler" v-cloak>
+        <div>
+            <label><strong>Max Alcohol by Volume(a.b.v)</strong></label>
+            <input type="range" v-model="maxAbv" min="0" max="100">
+            <small>{{ maxAbv }}</small>
+        </div>
+        <ul>
+            <li><strong>Beers</strong></li>
+            <li
+                v-for="beer in beers"
+                v-if="beer.abv < maxAbv">
+                name:{{ beer.name }} , abv: {{ beer.abv }}
+            </li>
+        </ul>
+    </div> -->
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //array mutation Functions
+        //sort()
+        //reverse()
+        //push()    return the array current length
+        //pop()     return the last element
+        //shift()   return the first item
+        //unshift() return the length
+        //splice()  swiss army knife
+        // this.abv.sort(function(v1, v2) {
+        //     return v1 - v2;
+        // });
+        //A negative value means that the 1st parameter should be in the array before the 2nd
+        //A positive value means that the 1st parameter should be in the array after the 2nd
+
+        //splice() add or delete from the middle
+
+        var beers = [
+            'Pope Lick Porter',
+            'Hyote Chocolate Stout',
+            'Ahool Ale',
+            'Tikibalang Barley Wine'
+        ]
+        var re = beers.splice(1, 2);
+        console.log(re);//Array [ "Hyote Chocolate Stout", "Ahool Ale" ]
+        console.log(beers);//Array [ "Pope Lick Porter", "Tikibalang Barley Wine" ]
+        //adding back to the array
+        for (let i = re.length - 1; i >= 0; i--) {
+            beers.splice(1, 0, re[i]);//0代表没有item需要删除
+        } 
+        console.log(beers);
+        //[ "Pope Lick Porter", "Hyote Chocolate Stout", "Ahool Ale", "Tikibalang Barley Wine" ]
+
+        //Using Vue like this
+        Vue.set(this.beers, 2, 'Ahool Pale Ale');
+        console.log(beers);
+        //[ "Pope Lick Porter", "Hyote Chocolate Stout", "Ahool Pale Ale", "Tikibalang Barley Wine" ]
+        
+        
+    </script>
+</body>
+
+</html>
