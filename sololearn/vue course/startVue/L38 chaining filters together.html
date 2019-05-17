@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #growler {
+            background-color: aqua;
+            width: 500px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="growler" v-cloak>
+        <div v-for="result in results">
+            <div>{{ result.name }}</div>
+            <small>
+                {{ result.ibu | convertIBU('--') | removePeriods | toUpperCase  }}
+            </small>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.18.0/dist/axios.js"></script>
+    <script>
+        //Filters
+        //chained via a pipe (|)
+        var growler = new Vue({
+            el: "#growler",
+            data: {
+                results: [
+                    { name: 'Ahool Ale', ibu: '33 i.b.u.' }
+                ]
+            },
+            filters: {
+                convertIBU: function (value, empty) {
+                    if (!value)
+                        return empty;
+                    return value.toString();
+                },
+                removePeriods: function(value) {
+                    return value.replace(/\./g, '');
+                },
+                toUpperCase: function(value) {
+                    return value.toUpperCase();
+                }
+            }
+        });
+        //The value is always the first parameter passed to a filter.
+        //filters are added to the $options after instantiation.
+    </script>
+</body>
+
+</html>
