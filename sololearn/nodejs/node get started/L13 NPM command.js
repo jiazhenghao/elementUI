@@ -29,3 +29,14 @@
 //npm help install
 //直接建一个默认npm project
 //npm init --yes
+//npm update
+//npm ls
+//npm uninstall xxxx[express]
+//npm show xxxx[express] versions
+// 192:L16 npm scripts jiazhenghao$ npm outdated
+// Package  Current  Wanted  Latest  Location
+// express  MISSING  4.17.0  4.17.0  4-scripts
+// jest     MISSING  24.8.0  24.8.0  4-scripts
+// npm install lodash@latest
+// npm install lodash@4.16
+// npm install lodash@4
