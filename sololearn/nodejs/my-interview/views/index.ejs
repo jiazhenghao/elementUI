@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <div class="panel panel-default">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>DeviceID</th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <%for (let i=0; i < cars.data.length; i++) {%>
+                <tbody>
+                    <tr>
+                        <td><%=cars.data[i].deviceId%></td>
+                    </tr>
+                    <tr>
+                        <td><%=cars.data[i].name%></td>
+                    </tr>
+                    <tr>
+                        <td><%=cars.data[i].status%></td>
+                    </tr>
+                </tbody>
+                <% } %>
+            </table>
+        </div>
+
+</body>
+
+</html>
