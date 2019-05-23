@@ -21,3 +21,11 @@ npm list --depth 0 --dev true
 npm list --depth 0 --prod true
 npm list --depth 0 --parseable true
 
+npm uninstall [package-name] --save //必须用--save才能从dependencies里删除
+npm install [package-name]@x.x.x --save --save-exact //这样才能安装指定版本，必须在dependencies里指定版本
+
+npm update //全量更新
+npm update --prod
+npm update --dev
+npm update [package-name]
+npm update [package-name] -g
