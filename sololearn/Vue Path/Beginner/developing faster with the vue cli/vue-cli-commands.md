@@ -15,3 +15,15 @@ npm run build
 npm run serve
 
 vue --version
+
+使用Vetur
+scaffold
+
+使用Vue VSCode Snippets
+vbase
+vdata
+
+使用Prettier - Code formatter优化代码排版
+
+使用Debugger for Chrome
+
