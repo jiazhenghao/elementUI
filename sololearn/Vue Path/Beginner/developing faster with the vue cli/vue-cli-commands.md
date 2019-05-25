@@ -13,3 +13,5 @@ vue create --help
 npm run lint  
 npm run build
 npm run serve
+
+vue --version
