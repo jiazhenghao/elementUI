@@ -46,3 +46,38 @@ Options:
 preset 如何导入
 vue create [package-name] --preset johnpapa/vue-clie-preset-all-javascript (load from github)
 vue create [package-name] --preset ~/yourpath
+
+preset 创建后保存在了～/.vuerc文件里面了
+单独提取出内容，放到preset.json里就可以使用下列命令导入了
+vue creat --preset ./ [app-name] 
+
+how to run vue-cli-service
+1.npm run serve
+2../node_modules/.bin/vue-cli-service serve
+3.npx vue-cli-service serve
+
+npm run build  targets
+application (--target app)
+library (--target lib)
+web componenet (--target wc)
+
+code-insiders . -r
+
+npx vue-cli-service build --help
+Usage: vue-cli-service build [options] [entry|pattern]
+
+  Options:
+
+    --mode             specify env mode (default: production)
+    --dest             specify output directory (default: dist)
+    --modern           build app targeting modern browsers with auto fallback
+    --no-unsafe-inline build app without introducing inline scripts
+    --target           app | lib | wc | wc-async (default: app)
+    --formats          list of output formats for library builds (default: commonjs,umd,umd-min)
+    --name             name for lib or web-component mode (default: "name" in package.json or entry filename)
+    --filename         file name for output, only usable for 'lib' target (default: value of --name)
+    --no-clean         do not remove the dist directory before building the project
+    --report           generate report.html to help analyze bundle content
+    --report-json      generate report.json to help analyze bundle content
+    --watch            watch for changes
+
