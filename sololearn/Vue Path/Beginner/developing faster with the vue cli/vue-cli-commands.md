@@ -81,3 +81,31 @@ Usage: vue-cli-service build [options] [entry|pattern]
     --report-json      generate report.json to help analyze bundle content
     --watch            watch for changes
 
+build a library with vue
+can see the folder "hello-lib-by-vue"
+HelloWorld.vue
+index.js
+vue.config.js
+package.json
+
+unit test: mocha or jest
+https://mochajs.org/  
+npm run test:unit
+npx vue-cli-service test:unit
+./node_modules/.bin/vue-cli-service test:unit
+
+npx vue-cli-service test:unit --help
+
+end-to-end test:cypress.io  or  nightwatch.js
+npm run test:e2e
+https://wwww.cypress.io
+http://nightwatchjs.org
+
+add plugin:把pwa这个插件加入进去
+vue add @vue/cli-plugin-pwa
+vue add @vue/pwa
+vue add vue-cli-plugin-apollo
+vue add apollo
+vue add @vue/eslint 这会跳出很多prompts，让你选择哪些是你需要的
+vue add @vue/eslint --config airbnb --lintOn save
+
