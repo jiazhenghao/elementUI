@@ -109,3 +109,11 @@ vue add apollo
 vue add @vue/eslint 这会跳出很多prompts，让你选择哪些是你需要的
 vue add @vue/eslint --config airbnb --lintOn save
 
+修改插件的配置
+vue invoke --help
+Usage: invoke [options] <plugin> [pluginOptions]
+invoke the generator of a plugin in an already created project
+Options:
+  --registry <url>  Use specified npm registry when installing dependencies (only for npm)
+  -h, --help        output usage information
+
