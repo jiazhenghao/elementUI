@@ -58,6 +58,7 @@
 
 <script>
 import availableParts from "../data/parts";
+import createdHookMixin from "./created-hook-mixin";
 
 export default {
   name: "RobotBuilder",
@@ -72,6 +73,7 @@ export default {
       selectedBaseIndex: 0
     };
   },
+  mixins: [createdHookMixin],
   computed: {
     saleBorderClass() {
       return this.selectedRobot.head.onSale ? 'sale-border' : '';
