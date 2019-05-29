@@ -13,6 +13,9 @@
           <li class="nav-item">
             <router-link class="nav-link" :to="{ name:'Build' }" exact>Build</router-link>
           </li>
+          <li class="nav-item cart">
+            <router-link class="nav-link" to="/cart" exact>Cart</router-link>
+          </li>
         </ul>
       </nav>
     </header>
@@ -96,5 +99,10 @@ ul {
   background-color: #aaa;
   width: 100px;
   min-height: 300px;
+}
+.nav-item.cart {
+  position: relative;
+  margin-left: auto;
+  border-right: none;
 }
 </style>
