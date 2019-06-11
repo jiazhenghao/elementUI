@@ -3,44 +3,17 @@
  * @return {number}
  * 我先排序，可以说，最中间的那个数字，肯定就是我们的目标数字。
  */
+
 var majorityElement = function (nums) {
     if (nums.length <= 2)
         return nums[0];
-    // nums.sort(function (a, b) {
-    //     return a - b;
-    // });
-    nums = quickSort(nums);
+    nums.sort(function (a, b) {
+        return a - b;
+    });
     return nums[Math.trunc(nums.length / 2)];
 };
 
-function quickSort(arr, left, right) {
-    var len = arr.length,
-        partitionIndex,
-        left = typeof left != 'number' ? 0 : left,
-        right = typeof right != 'number' ? len - 1 : right;
-    if (left < right) {
-        partitionIndex = partition(arr, left, right);
-        quickSort(arr, left, partitionIndex - 1);
-        quickSort(arr, partitionIndex + 1, right);
-    }
-    return arr;
-}
-
-function partition(arr, left, right) {     // 分区操作
-    var pivot = left,                      // 设定基准值（pivot）
-        index = pivot + 1;
-    for (var i = index; i <= right; i++) {
-        if (arr[i] < arr[pivot]) {
-            swap(arr, i, index);
-            index++;
-        }
-    }
-    swap(arr, pivot, index - 1);
-    return index - 1;
-}
-
-function swap(arr, i, j) {
-    var temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
+/*
+Runtime: 60 ms, faster than 93.60% 
+Memory Usage: 37.7 MB, less than 46.66%
+*/

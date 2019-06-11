@@ -2,7 +2,7 @@ const randomArrayGenerator = require('./randomArrayGenerator');
 /*
     To test
 */
-var array = randomArrayGenerator(20);
+var array = randomArrayGenerator(20000);
 console.log(array);
 
 function quickSort(arr, left, right) {
@@ -36,9 +36,9 @@ function partition(arr, left, right) {     // 分区操作
     // console.log(right);//9
     
     swap(arr, pivot, index - 1);
-    console.log('index ' + index);
+    //console.log('index ' + index);
     //console.log('pivot ' + pivot);
-    console.log(arr);
+    //console.log(arr);
     return index - 1;
 }
 
