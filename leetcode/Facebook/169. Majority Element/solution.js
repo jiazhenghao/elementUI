@@ -1,19 +1,25 @@
-const randomArrayGenerator = require('./randomArrayGenerator');
-/*
-    To test
-*/
-var array = randomArrayGenerator(20);
-console.log(array);
+/**
+ * @param {number[]} nums
+ * @return {number}
+ * 我先排序，可以说，最中间的那个数字，肯定就是我们的目标数字。
+ */
+var majorityElement = function (nums) {
+    if (nums.length <= 2)
+        return nums[0];
+    // nums.sort(function (a, b) {
+    //     return a - b;
+    // });
+    nums = quickSort(nums);
+    return nums[Math.trunc(nums.length / 2)];
+};
 
 function quickSort(arr, left, right) {
     var len = arr.length,
         partitionIndex,
         left = typeof left != 'number' ? 0 : left,
         right = typeof right != 'number' ? len - 1 : right;
-
     if (left < right) {
         partitionIndex = partition(arr, left, right);
-        //console.log(partitionIndex);
         quickSort(arr, left, partitionIndex - 1);
         quickSort(arr, partitionIndex + 1, right);
     }
@@ -26,19 +32,10 @@ function partition(arr, left, right) {     // 分区操作
     for (var i = index; i <= right; i++) {
         if (arr[i] < arr[pivot]) {
             swap(arr, i, index);
-            //console.log(i + ' i');
-            //console.log(index + ' index');
             index++;
         }
-        
     }
-    // console.log(left);//0
-    // console.log(right);//9
-    
     swap(arr, pivot, index - 1);
-    console.log('index ' + index);
-    //console.log('pivot ' + pivot);
-    console.log(arr);
     return index - 1;
 }
 
@@ -46,17 +43,4 @@ function swap(arr, i, j) {
     var temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
-    //console.log(arr);
 }
-
-var begin = new Date();
-var arr = quickSort(array);
-var end = new Date();
-//console.log(end - begin);
-console.log(arr);
-
-//length = 200000; time = 35
-//length = 100000; time = 29
-//length = 50000; time = 11
-//length = 25000; time = 8
-//length = 10000; time = 7
