@@ -87,6 +87,6 @@ function moveDown(arr, i, comparator) {
 }
 
 /*
-Runtime: 100 ms, faster than 86.96%
-Memory Usage: 40 MB, less than 36.00%
+Runtime: 92 ms, faster than 95.65% 
+Memory Usage: 39.8 MB, less than 52.00%
 */
