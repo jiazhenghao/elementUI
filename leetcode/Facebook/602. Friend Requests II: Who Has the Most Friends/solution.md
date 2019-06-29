@@ -8,6 +8,6 @@
         ) 
         as tbl1 group by ids
     ) 
-    as tbl2 order by cnt desc limit 1 
+    as tbl2 order by cnt desc limit 1;
     
 --- end
