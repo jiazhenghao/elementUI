@@ -39,3 +39,7 @@ var minMeetingRooms = function (intervals) {
     }
     return usedRooms;
 };
+/*
+Runtime: 68 ms, faster than 96.63% 
+Memory Usage: 37.1 MB, less than 64.73%
+*/
