@@ -8,3 +8,5 @@ show tables #展示集合
 
 启动mongodb
 mongod --config /usr/local/etc/mongod.conf
+
+db.books.find().pretty()  #查看books集合下的所有数据
