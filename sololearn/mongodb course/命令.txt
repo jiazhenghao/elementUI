@@ -5,3 +5,6 @@ db.runoob.insert({"name":"菜鸟教程"}) #创建完成以后，看不到数据�
 db.dropDatabase() # 删除数据库
 db.collection_name.drop() # 删除集合xxx
 show tables #展示集合
+
+启动mongodb
+mongod --config /usr/local/etc/mongod.conf
