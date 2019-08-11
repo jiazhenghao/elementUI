@@ -1,8 +1,13 @@
 function booksController(Book) {
     function post(req, res) {
         const book = new Book(req.body);
+        if (!req.body.title) {
+            res.status(400);
+            return res.send('Title is required');
+        }
         book.save();
-        return res.status(201).json(book);
+        res.status(201);
+        return res.json(book);
     }
     function get(req, res) {
         const query = {};
@@ -13,7 +18,14 @@ function booksController(Book) {
             if (err) {
                 return res.send(err);
             }
-            return res.json(books);
+            //HATEOAS
+            const returnBooks = books.map((book)=> {
+                const newBook = book.toJSON();
+                newBook.links = {},
+                newBook.links.self = `http://${req.headers.host}/api/books/${book._id}`;
+                return newBook;
+            });
+            return res.json(returnBooks);
         });
     }
     return { post: post, get: get };

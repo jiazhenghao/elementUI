@@ -10,3 +10,10 @@ show tables #展示集合
 mongod --config /usr/local/etc/mongod.conf
 
 db.books.find().pretty()  #查看books集合下的所有数据
+
+show dbs
+use bookAPI
+use bookAPI-prod
+use bookAPI_Test
+show tables
+db.books.find().pretty()

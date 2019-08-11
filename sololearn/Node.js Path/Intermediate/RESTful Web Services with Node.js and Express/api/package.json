@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/**/*Tests.js",
     "lint": "eslint",
     "start": "nodemon app.js",
     "mongo": "mongod --config /usr/local/etc/mongod.conf"
@@ -20,7 +20,11 @@
   },
   "devDependencies": {
     "eslint": "^6.1.0",
-    "eslint-plugin-vue": "^5.2.3"
+    "eslint-plugin-vue": "^5.2.3",
+    "mocha": "6.2.0",
+    "should": "13.2.3",
+    "sinon": "7.4.1",
+    "supertest": "4.0.2"
   },
   "nodemonConfig": {
     "restartable": "rs",
