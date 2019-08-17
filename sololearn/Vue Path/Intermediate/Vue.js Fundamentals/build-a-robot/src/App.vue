@@ -39,7 +39,7 @@ export default {
   name: 'app',
   computed: {
     cart() {
-      return this.$store.state.cart;
+      return this.$store.state.robots.cart;
     },
   },
 };
