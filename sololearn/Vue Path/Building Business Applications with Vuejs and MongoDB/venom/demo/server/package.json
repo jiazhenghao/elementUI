@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run lint & nodemon app.js",
+    "lint": "./node_modules/.bin/eslint **/*.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,9 @@
     "nodemon": "1.19.1"
   },
   "dependencies": {
-    "mongoose": "5.6.9"
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "mongoose": "5.6.9",
+    "morgan": "1.9.1"
   }
 }
