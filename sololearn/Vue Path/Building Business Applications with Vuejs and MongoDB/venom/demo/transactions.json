@@ -1,0 +1,65 @@
+[
+    {
+        "userId": "5b5b5df1333e8500dddc37b3",
+        "transactionDate": "2018-05-14T00:00:00.000Z",
+        "transactionType": "Opening Balance",
+        "description": "Equity Line Initial Opening Balance",
+        "charge": "12378.0",
+        "deposit": "0.0",
+        "notes": ""
+    },
+    {
+        "userId": "5b5b5df1333e8500dddc37b3",
+        "transactionDate": "2018-05-15T00:00:00.000Z",
+        "transactionType": "Credit Card",
+        "description": "Amazon - Whey Protien",
+        "charge": "23.45",
+        "deposit": "0.0",
+        "notes": ""
+    },
+    {
+        "userId": "5b5b5df1333e8500dddc37b3",
+        "transactionDate": "2018-05-15T00:00:00.000Z",
+        "transactionType": "Reward",
+        "description": "New account first charge reward deposit",
+        "charge": "0.0",
+        "deposit": "100.0",
+        "notes": ""
+    },
+    {
+        "userId": "5b5b5df1333e8500dddc37b3",
+        "transactionDate": "2018-05-15T00:00:00.000Z",
+        "transactionType": "Credit Card",
+        "description": "Tex-mex lunch",
+        "charge": "12.33",
+        "deposit": "0.0",
+        "notes": ""
+    },
+    {
+        "userId": "5b5b5df1333e8500dddc37b3",
+        "transactionDate": "2018-05-15T00:00:00.000Z",
+        "transactionType": "Deposit",
+        "description": "May 15 Payroll Deposit",
+        "charge": "0.0",
+        "deposit": "1000.0",
+        "notes": ""
+    },
+    {
+        "userId": "5b5b5df1333e8500dddc37b3",
+        "transactionDate": "2018-05-16T00:00:00.000Z",
+        "transactionType": "Credit Card",
+        "description": "Quick Trip - gas and car wash",
+        "charge": "38.12",
+        "deposit": "0.0",
+        "notes": "Gas for the Acura. Got a car wash too."
+    },
+    {
+        "userId": "5b5b5df1333e8500dddc37b3",
+        "transactionDate": "2018-05-16T00:00:00.000Z",
+        "transactionType": "Credit Card",
+        "description": "Optics World - Vortex Scope",
+        "charge": "833.0",
+        "deposit": "0.0",
+        "notes": "My wife is going to kill me when she see this!"
+    }
+]

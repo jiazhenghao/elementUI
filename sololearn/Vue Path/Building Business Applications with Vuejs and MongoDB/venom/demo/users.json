@@ -1,0 +1,8 @@
+{
+    "isActive": true,
+    "email": "user1@test.com",
+    "first": "User1",
+    "last": "Test",
+    "password": "test111",
+    "createdOn": "2019-08-19 13:58:49"
+}
