@@ -4,7 +4,7 @@ const api = require('./api');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-app.set('port', (process.env.PORT || 8081));
+app.set('port', (process.env.PORT || 3000));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
