@@ -24,13 +24,13 @@ module.exports = function (router) {
     router.post('/user', (req, res) => {
         let user = new User(req.body);
         user.save((err, user) => {
-            if (err) return console.log(err);
+            if (err) return //console.log(err);
             res.status(200).json(user);
         })
     });
 
     router.put('/user/:id', (req, res) => {
-        console.log(req.body);
+        //console.log(req.body);
         let qry = { _id: req.params.id };
         let doc = {
             //first: req.body.firstName,
@@ -39,9 +39,9 @@ module.exports = function (router) {
             //password: req.body.password,
             isActive: req.body.isActive
         };
-        console.log(doc);
+        //console.log(doc);
         User.update(qry, doc, (err, respRaw) => {
-            if (err) return console.log(err);
+            if (err) return //console.log(err);
             res.status(200).json(respRaw);
         })
     });

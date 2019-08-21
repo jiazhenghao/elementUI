@@ -61,6 +61,7 @@ export default {
       return this.$store.getters.isLoggedIn
     },
     loginError () {
+      // console.log('password wrong')
       return this.$store.getters.loginError
     }
   },

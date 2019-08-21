@@ -45,7 +45,11 @@ const actions = {
         if (data && data.length > 0) {
           // Test password entered (payload) against user object
           const pwdHash = data[0].password
-          if (bcrypt.compareSync(payload.password, pwdHash)) {
+
+          // console.log(pwdHash)
+          // console.log(payload.password)
+          // if (bcrypt.compareSync(payload.password, pwdHash)) {
+          if (pwdHash === payload.password) {
             const user = data[0]
             payload.userId = user._id
             payload.first = user.first

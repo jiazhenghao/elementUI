@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 module.exports = router => {
     // Get transactions for given year and month, by userId...
     router.get('/transaction/:year/:month', (req, res) => {
-        console.log(req.params);
+        //console.log(req.params);
         const userId = req.get('userId');
         //const userId = '5b5b5df1333e8500dddc37b3';
         const month = req.params.month - 1; // JS months are zero-based
@@ -76,7 +76,7 @@ module.exports = router => {
     router.post('/transaction', (req, res) => {
         let transaction = new Transaction(req.body);
         transaction.save((err, transaction) => {
-            if (err) return console.log(err);
+            if (err) return //console.log(err);
             res.status(200).json(transaction);
         });
     });
