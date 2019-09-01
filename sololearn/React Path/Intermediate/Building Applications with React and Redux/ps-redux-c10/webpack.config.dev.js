@@ -8,7 +8,7 @@ module.exports = {
   mode: "development",
   target: "web",
   devtool: "cheap-module-source-map",
-  entry: "./src/index.js",
+  entry: "./src/index",
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
@@ -20,10 +20,12 @@ module.exports = {
     historyApiFallback: true,
     disableHostCheck: true,
     headers: { "Access-Control-Allow-Origin": "*" },
-    https: false,
-    port: 3001
+    https: false
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env.API_URL": JSON.stringify("http://localhost:3001")
+    }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
       favicon: "src/favicon.ico"
@@ -37,7 +39,7 @@ module.exports = {
         use: ["babel-loader", "eslint-loader"]
       },
       {
-        test: /\.css$/,
+        test: /(\.css)$/,
         use: ["style-loader", "css-loader"]
       }
     ]
