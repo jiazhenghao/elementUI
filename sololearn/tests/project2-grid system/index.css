@@ -1,12 +1,20 @@
-div {
-  padding: 0px;
-  margin: 0px;
-  border: 1px solid red;
-  background: yellow;
+.container {
+  font-size: 0px !important;
+  letter-spacing: -1px !important;
 }
 
 .inline__item {
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid black;
+  background: yellow;
   box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
 }
 
 @media screen and (min-width: 360px) {
@@ -15,8 +23,10 @@ div {
     width: 50%;
   }
 }
+
 @media screen and (min-width: 720px) {
   .inline__item {
+    display: inline-block;
     width: 25%;
   }
 }
