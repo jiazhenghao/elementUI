@@ -1,32 +1,66 @@
-.container {
-  font-size: 0px !important;
-  letter-spacing: -1px !important;
+@media screen and (max-width: 360px) {
+  .container {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(1, 1fr [col-start]);
+    grid-template-rows: repeat(8, 100px);
+  }
 }
 
-.inline__item {
-  padding: 0px;
-  margin: 0px;
-  border: 1px solid black;
-  background: yellow;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-body {
-  padding: 0px;
-  margin: 0px;
-}
-
-@media screen and (min-width: 360px) {
-  .inline__item {
-    display: inline-block;
-    width: 50%;
+@media screen and (min-width: 360px) and (max-width: 720px) {
+  .container {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(2, 1fr [col-start]);
+    grid-template-rows: repeat(4, 100px);
   }
 }
 
 @media screen and (min-width: 720px) {
-  .inline__item {
-    display: inline-block;
-    width: 25%;
+  .container {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(4, 1fr [col-start]);
+    grid-template-rows: [row1-start] 100px [row1-end] 100px [last-line];
   }
+}
+
+.item-1 {
+  background-color: blue;
+  border: 1px solid black;
+}
+
+.item-2 {
+  background-color: greenyellow;
+  border: 1px solid black;
+}
+
+.item-3 {
+  background-color: violet;
+  border: 1px solid black;
+}
+
+.item-4 {
+  background-color: #4ab98b;
+  border: 1px solid black;
+}
+
+.item-5 {
+  background-color: #331122;
+  border: 1px solid black;
+}
+
+.item-6 {
+  background-color: #778899;
+  border: 1px solid black;
+}
+
+.item-7 {
+  background-color: #8f0316;
+  border: 1px solid black;
+}
+
+.item-8 {
+  background-color: #552986;
+  border: 1px solid black;
 }
